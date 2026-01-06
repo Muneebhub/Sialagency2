@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.roboto-custom {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Grid system */
+.col-1  { width: 8.33%; }
+.col-2  { width: 16.66%; }
+.col-3  { width: 25%; }
+.col-4  { width: 33.33%; }
+.col-5  { width: 41.66%; }
+.col-6  { width: 50%; }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
+.col-9  { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px)  { .container { width: 750px; } }
+@media (min-width: 992px)  { .container { width: 970px; } }
+@media (min-width: 1200px) { .container { width: 1170px; } }
+
+/* Logo */
+.logo {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  min-height: 70vh;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .banner { min-height: 40vh; }
+}
+
+/* Headings */
+.heading {
+  text-align: center;
+  padding: 50px 0 20px 0;
+  font-size: 44px;
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+    padding: 20px 0 10px 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Meta Ads Cards */
+.meta-card {
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.col-3.meta-card { width: 25%; }
+
+@media (max-width: 992px) {
+  .col-3.meta-card { width: 50%; }
+}
+@media (max-width: 768px) {
+  .col-3.meta-card { width: 100%; }
+}
+
+/* Footer */
+footer {
+  background: #003049;
+  padding: 80px 0;
+  color: white;
+}
+.footer-menu li {
+  list-style: none;
+  padding: 10px 16px;
+}
+footer h3 {
+  padding: 20px;
+}
+.copyright {
+  background: black;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.custom-footer {
+  background: black;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap; /* mobile ke liye important */
+}
+
+.custom-footer .social-icons a {
+  margin: 0 15px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+ 
+.custom-footer .footer-text {
+  position: absolute;
+  right: 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .custom-footer {
+    flex-direction: column;
+  }
+
+  .custom-footer .footer-text {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+.container .col-3 {
+  text-align: left;          /* pc par text left aligned */
+}
+
+.container .col-3 h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.container .col-3 p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+  .container .col-3 {
+    width: 100%;             /* 1 card per row */
+    margin-bottom: 25px;     /* thoda gap niche */
+    text-align: center;      /* mobile par center align */
+  }
+
+  .container .col-3 h3 {
+    font-size: 16px;
+  }
+
+  .container .col-3 p {
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 0 10px;          /* left-right thoda space */
+    text-align: justify;      /* text neatly adjust hoga */
+  }
+
+  .container .col-3 img {
+    max-width: 80px;
+    border-radius: 50%;
+  }
+}
+.top-bar {
+  background-color: #020220; /* navy blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top-bar .portfolio-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  flex: 1;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ee9b00 /* hover effect */
+}
+
+.col-6 {
+  padding: 15px; /* dono side se gap */
+}
+
+.video-responsive {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* optional */
+}
+.heading {
+  font-size: 40px;
+  text-align: center;
+  margin: 1px 0;
+  font-weight: bold;
+  color: #020220; /* navy blue */
+}
